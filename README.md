@@ -4,6 +4,6 @@ Queah game using server side processing with MinMax algorithm and Express. Clien
 ```
 ~/queah_express/server$ docker-compose up
 ```
-Running at localhost:3000
+Running at http://localhost:3000/
 ## Screenshots
 ![Home Page](screenshots/queah.png)
