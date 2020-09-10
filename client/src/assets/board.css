@@ -1,0 +1,54 @@
+.board {
+    position: relative;
+}
+
+.diagonal-square-inner {
+    background-color: #97e3d5;
+}
+
+.diagonal-square-outer {
+    background-color: #f47560;
+}
+
+.diagonal-square-outer, .diagonal-square-inner {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.diagonal-square-outer:hover {*/
+/*    background-color: navajowhite;*/
+/*}*/
+
+/*.diagonal-square-inner:hover {*/
+/*    background-color: navajowhite;*/
+/*}*/
+
+.piece-a, .piece-b {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piece-a {
+    background-color: white;
+}
+
+.piece-b {
+    background-color: black;
+}
+
+.piece-a p {
+    color: black;
+}
+
+.piece-b p {
+    color: whitesmoke;
+}

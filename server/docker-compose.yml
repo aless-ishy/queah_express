@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  app-queah:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: app-queah
+    container_name: app-queah
+    restart: unless-stopped
+    networks:
+      - app-network
+  server:
+    image: nginx:mainline-alpine
+    container_name: server
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - web-root:/var/www/html
+      - ./nginx-conf:/etc/nginx/conf.d
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+    depends_on:
+      - app-queah
+    networks:
+      - app-network
+volumes:
+  certbot-etc:
+  certbot-var:
+  web-root:
+    driver: local
+    driver_opts:
+      type: none
+      device: "/home/alessandro/IdeaProjects/queah_express/server/public"
+      o: bind
+
+networks:
+  app-network:
+    driver: bridge

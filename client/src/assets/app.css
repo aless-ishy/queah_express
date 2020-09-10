@@ -1,0 +1,85 @@
+.queah-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.queah-body > *{
+    margin: 20px 0;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.content > *{
+    margin: 0 20px;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.info > .piece-a, .info > .piece-b{
+    width: 40px;
+    height: 40px;
+    margin:20px;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+
+.info > .piece-a{
+    width: 40px;
+    height: 40px;
+    margin:20px;
+    background-color: whitesmoke;
+}
+
+.configuration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    padding: 0 15px;
+}
+
+.configuration > h2{
+    margin-bottom: 0;
+}
+
+.configuration > *{
+    margin: 15px 0;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.difficulty-configuration{
+    width: 60px;
+}
+
+.players{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    height: 36px;
+    width: 36px;
+    background-color: #97e3d5;
+    border-radius: 50%;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    transition: 0.4s;
+}
