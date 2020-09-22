@@ -61,7 +61,7 @@ class Board extends Component {
                                secondary={matrix[row][i] === (this.props.switch ? 2 : 1)} rotate/> :
                         Array.isArray(movements) && movements.some(position => position.i === row && position.j === i && position.isExternalMatrix !== isInnerRow) &&
                         <Piece onLookUp={() => this.select(row, i, isInnerRow, matrix[row][i])}
-                               secondary={this.state.lookingAt.playerId === (this.props.switch ? 2 : 1)} rotate neutral/> : undefined}
+                               secondary={this.state.lookingAt.playerId === (this.props.switch ? 2 : 1) || !this.state.lookingAt.playerId && this.props.switch} rotate neutral/> : undefined}
                 </div>
             )
         }
